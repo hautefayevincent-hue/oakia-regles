@@ -1,5 +1,5 @@
 {
- "version": "2026-09-08",
+ "version": "2026-09-08b",
  "libelle": "Règles vivantes — vocabulaire du moteur",
  "note": "Chaque règle AJOUTE, jamais n'enlève. Une règle inconnue de cette version est ignorée sans bruit. La logique n'est pas ici : elle est dans le code.",
  "regles": [
