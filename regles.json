@@ -1,0 +1,85 @@
+{
+ "version": "2026-09-08",
+ "libelle": "Règles vivantes — vocabulaire du moteur",
+ "note": "Chaque règle AJOUTE, jamais n'enlève. Une règle inconnue de cette version est ignorée sans bruit. La logique n'est pas ici : elle est dans le code.",
+ "regles": [
+  {
+   "id": "R-0001",
+   "famille": "E1",
+   "le": "2026-09-08",
+   "table": "entetes_sens",
+   "cle": "localisation",
+   "ajoute": ["site", "ouvrage", "reperage", "tranche", "cage", "logement"],
+   "pourquoi": "Les mots qui nomment un endroit en tête de colonne. « Logement » laissait la colonne vide et l'endroit partait dans les échéances (pack 16)."
+  },
+  {
+   "id": "R-0002",
+   "famille": "E1",
+   "le": "2026-09-08",
+   "table": "entetes_sens",
+   "cle": "description",
+   "ajoute": ["anomalie", "defaut", "malfacon", "nonconformite", "desordres"],
+   "pourquoi": "Un tableau de réserves nomme parfois sa colonne « Anomalie » ou « Malfaçon » : sans ces mots l'onglet passait pour étranger et restait vide."
+  },
+  {
+   "id": "R-0003",
+   "famille": "E1",
+   "le": "2026-09-08",
+   "table": "entetes_sens",
+   "cle": "echeance",
+   "ajoute": ["butoir", "limite", "terme", "livraison"],
+   "pourquoi": "« Date butoir », « Délai limite » : des colonnes d'échéance sous un autre nom."
+  },
+  {
+   "id": "R-0004",
+   "famille": "E1",
+   "le": "2026-09-08",
+   "table": "entetes_sens",
+   "cle": "responsable",
+   "ajoute": ["pilote", "referent", "encharge"],
+   "pourquoi": "Qui porte l'action, dit autrement."
+  },
+  {
+   "id": "R-0005",
+   "famille": "L1",
+   "le": "2026-09-08",
+   "table": "mots_de_metier",
+   "cle": "",
+   "ajoute": ["sanitaire", "sanitaires", "cvc", "assainissement", "reseaux",
+              "cloisons", "doublage", "plafonds", "souples", "ossature",
+              "signalisation", "prevention", "coordination", "coordonnateur",
+              "geometre", "ascensoriste", "second", "gros", "oeuvre"],
+   "pourquoi": "Des mots de métier qui se trouvent dans les raisons sociales : seuls, ils ne désignent aucune entreprise. Même famille que « contrôlé » attribué à CTB CONTROLE (pack 16)."
+  },
+  {
+   "id": "R-0006",
+   "famille": "R1",
+   "le": "2026-09-08",
+   "table": "titres_texte",
+   "cle": "",
+   "ajoute": ["moyens du jour", "faits marquants", "faits marquants du mois",
+              "rappel du contexte", "contexte", "commentaire general"],
+   "pourquoi": "Des intitulés qu'on écrit, jamais des tableaux qu'on remplit. Rangés en tableau, ils sortaient vides."
+  },
+  {
+   "id": "R-0007",
+   "famille": "R1",
+   "le": "2026-09-08",
+   "table": "titres_cible",
+   "cle": "actions",
+   "ajoute": ["travaux a engager", "engagements pris", "actions a mener",
+              "suites a donner", "ce qui reste a faire"],
+   "pourquoi": "Des intitulés d'actions que le devineur rangeait ailleurs. « Travaux à engager » partait en avancement (pack 16)."
+  },
+  {
+   "id": "R-0008",
+   "famille": "R1",
+   "le": "2026-09-08",
+   "table": "titres_cible",
+   "cle": "snags",
+   "ajoute": ["points bloquants", "anomalies constatees", "malfacons",
+              "desordres constates", "points a lever"],
+   "pourquoi": "Des intitulés de réserves écrits autrement que « Réserves »."
+  }
+ ]
+}
