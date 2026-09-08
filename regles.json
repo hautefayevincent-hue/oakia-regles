@@ -80,6 +80,15 @@
    "ajoute": ["points bloquants", "anomalies constatees", "malfacons",
               "desordres constates", "points a lever"],
    "pourquoi": "Des intitulés de réserves écrits autrement que « Réserves »."
+  },
+    ,{
+   "id": "R-0009",
+   "famille": "E1",
+   "le": "2026-09-08",
+   "table": "entetes_sens",
+   "cle": "localisation",
+   "ajoute": ["chambre", "emprise"],
+   "pourquoi": "des endroits, dits autrement"
   }
  ]
 }
