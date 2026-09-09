@@ -1,0 +1,72 @@
+{
+ "version": "2026-09-08",
+ "libelle": "Réparations vivantes — ce que le logiciel sait remettre d'aplomb",
+ "note": "Une fiche dit : quand tu vois CECI, fais CELA, dans cet ordre. Les symptômes et les gestes vivent dans le code et forment deux listes fermées ; AUCUN GESTE N'EFFACE. Une fiche dont le symptôme ou les gestes sont inconnus de cette version est ignorée sans bruit. Un constat sans fiche remonte en cas : c'est comme ça que cette base grossit.",
+ "reparations": [
+  {
+   "id": "P-0001",
+   "famille": "donnees",
+   "le": "2026-09-08",
+   "quand": "fichier_illisible",
+   "faire": ["reprendre_de_l_instantane", "reprendre_de_la_sauvegarde", "ecarter_le_fichier"],
+   "pourquoi": "Un fichier de données qui ne se relit plus : un disque plein qui tronque une écriture, un antivirus, un dossier synchronisé revenu à moitié. On le reprend de la photographie du matin ; à défaut de l'archive rangée sous Documents ; en dernier recours on l'écarte, et le cas part en bloquant parce qu'un suivi de chantier vient de disparaître."
+  },
+  {
+   "id": "P-0002",
+   "famille": "donnees",
+   "le": "2026-09-08",
+   "quand": "fichier_absent",
+   "faire": ["reprendre_de_l_instantane", "reprendre_de_la_sauvegarde"],
+   "pourquoi": "Un fichier effacé ne se répare pas à la lecture : plus personne ne le lit, donc personne ne s'aperçoit qu'il manque. On compare le poste à son dernier instantané et on remet ce qui a disparu."
+  },
+  {
+   "id": "P-0003",
+   "famille": "donnees",
+   "le": "2026-09-08",
+   "quand": "dossier_a_pris_le_nom",
+   "faire": ["ecarter_le_dossier", "reprendre_de_l_instantane"],
+   "pourquoi": "Un outil de synchronisation qui a mal fini laisse un dossier portant le nom d'un fichier. Le dossier est écarté — jamais effacé, il peut contenir quelque chose — et le fichier revient de l'instantané."
+  },
+  {
+   "id": "P-0004",
+   "famille": "donnees",
+   "le": "2026-09-08",
+   "quand": "restes_d_ecriture",
+   "faire": ["ecarter_le_fichier"],
+   "pourquoi": "Le fichier provisoire d'une écriture coupée en plein milieu — coupure de courant, poste éteint pendant une sauvegarde. Il ne sert plus à rien mais il n'est pas effacé : s'il portait la seule version d'un texte, on veut pouvoir le rouvrir."
+  },
+  {
+   "id": "P-0005",
+   "famille": "droits",
+   "le": "2026-09-08",
+   "quand": "fichier_en_lecture_seule",
+   "faire": ["rendre_inscriptible"],
+   "pourquoi": "Un droit retiré, un fichier revenu d'une clé USB. Le logiciel le découvrait en pleine production d'un document, au pire moment."
+  },
+  {
+   "id": "P-0006",
+   "famille": "sauvegardes",
+   "le": "2026-09-08",
+   "quand": "instantane_perime",
+   "faire": ["refaire_l_instantane"],
+   "pourquoi": "C'est le symptôme le plus discret et le plus grave : sans photographie récente, plus aucune des réparations ci-dessus n'a de quoi reprendre. On le refait avant d'en avoir besoin."
+  },
+  {
+   "id": "P-0007",
+   "famille": "fichiers",
+   "le": "2026-09-08",
+   "quand": "reglage_vide",
+   "ou": "dossier_donnees",
+   "faire": ["remettre_le_dossier_de_travail"],
+   "pourquoi": "Sans dossier de travail le logiciel n'a nulle part où écrire. On prend celui des Documents, le seul dont on soit sûr qu'il accepte l'écriture."
+  },
+  {
+   "id": "P-0008",
+   "famille": "logiciel",
+   "le": "2026-09-08",
+   "quand": "ressource_livree_abimee",
+   "faire": ["oublier_la_ressource"],
+   "pourquoi": "Une ressource livrée mise en quarantaine par un antivirus. Le logiciel doit savoir s'en passer et repartir sur ce que son code sait, pas s'arrêter."
+  }
+ ]
+}

@@ -9,7 +9,14 @@
    "le": "2026-09-08",
    "table": "entetes_sens",
    "cle": "localisation",
-   "ajoute": ["site", "ouvrage", "reperage", "tranche", "cage", "logement"],
+   "ajoute": [
+    "site",
+    "ouvrage",
+    "reperage",
+    "tranche",
+    "cage",
+    "logement"
+   ],
    "pourquoi": "Les mots qui nomment un endroit en tête de colonne. « Logement » laissait la colonne vide et l'endroit partait dans les échéances (pack 16)."
   },
   {
@@ -18,7 +25,13 @@
    "le": "2026-09-08",
    "table": "entetes_sens",
    "cle": "description",
-   "ajoute": ["anomalie", "defaut", "malfacon", "nonconformite", "desordres"],
+   "ajoute": [
+    "anomalie",
+    "defaut",
+    "malfacon",
+    "nonconformite",
+    "desordres"
+   ],
    "pourquoi": "Un tableau de réserves nomme parfois sa colonne « Anomalie » ou « Malfaçon » : sans ces mots l'onglet passait pour étranger et restait vide."
   },
   {
@@ -27,7 +40,12 @@
    "le": "2026-09-08",
    "table": "entetes_sens",
    "cle": "echeance",
-   "ajoute": ["butoir", "limite", "terme", "livraison"],
+   "ajoute": [
+    "butoir",
+    "limite",
+    "terme",
+    "livraison"
+   ],
    "pourquoi": "« Date butoir », « Délai limite » : des colonnes d'échéance sous un autre nom."
   },
   {
@@ -36,7 +54,11 @@
    "le": "2026-09-08",
    "table": "entetes_sens",
    "cle": "responsable",
-   "ajoute": ["pilote", "referent", "encharge"],
+   "ajoute": [
+    "pilote",
+    "referent",
+    "encharge"
+   ],
    "pourquoi": "Qui porte l'action, dit autrement."
   },
   {
@@ -45,10 +67,27 @@
    "le": "2026-09-08",
    "table": "mots_de_metier",
    "cle": "",
-   "ajoute": ["sanitaire", "sanitaires", "cvc", "assainissement", "reseaux",
-              "cloisons", "doublage", "plafonds", "souples", "ossature",
-              "signalisation", "prevention", "coordination", "coordonnateur",
-              "geometre", "ascensoriste", "second", "gros", "oeuvre"],
+   "ajoute": [
+    "sanitaire",
+    "sanitaires",
+    "cvc",
+    "assainissement",
+    "reseaux",
+    "cloisons",
+    "doublage",
+    "plafonds",
+    "souples",
+    "ossature",
+    "signalisation",
+    "prevention",
+    "coordination",
+    "coordonnateur",
+    "geometre",
+    "ascensoriste",
+    "second",
+    "gros",
+    "oeuvre"
+   ],
    "pourquoi": "Des mots de métier qui se trouvent dans les raisons sociales : seuls, ils ne désignent aucune entreprise. Même famille que « contrôlé » attribué à CTB CONTROLE (pack 16)."
   },
   {
@@ -57,8 +96,14 @@
    "le": "2026-09-08",
    "table": "titres_texte",
    "cle": "",
-   "ajoute": ["moyens du jour", "faits marquants", "faits marquants du mois",
-              "rappel du contexte", "contexte", "commentaire general"],
+   "ajoute": [
+    "moyens du jour",
+    "faits marquants",
+    "faits marquants du mois",
+    "rappel du contexte",
+    "contexte",
+    "commentaire general"
+   ],
    "pourquoi": "Des intitulés qu'on écrit, jamais des tableaux qu'on remplit. Rangés en tableau, ils sortaient vides."
   },
   {
@@ -67,8 +112,13 @@
    "le": "2026-09-08",
    "table": "titres_cible",
    "cle": "actions",
-   "ajoute": ["travaux a engager", "engagements pris", "actions a mener",
-              "suites a donner", "ce qui reste a faire"],
+   "ajoute": [
+    "travaux a engager",
+    "engagements pris",
+    "actions a mener",
+    "suites a donner",
+    "ce qui reste a faire"
+   ],
    "pourquoi": "Des intitulés d'actions que le devineur rangeait ailleurs. « Travaux à engager » partait en avancement (pack 16)."
   },
   {
@@ -77,18 +127,33 @@
    "le": "2026-09-08",
    "table": "titres_cible",
    "cle": "snags",
-   "ajoute": ["points bloquants", "anomalies constatees", "malfacons",
-              "desordres constates", "points a lever"],
+   "ajoute": [
+    "points bloquants",
+    "anomalies constatees",
+    "malfacons",
+    "desordres constates",
+    "points a lever"
+   ],
    "pourquoi": "Des intitulés de réserves écrits autrement que « Réserves »."
   },
-    ,{
+  {
    "id": "R-0009",
-   "famille": "E1",
+   "famille": "R1",
    "le": "2026-09-08",
-   "table": "entetes_sens",
-   "cle": "localisation",
-   "ajoute": ["chambre", "emprise"],
-   "pourquoi": "des endroits, dits autrement"
+   "table": "titres_cible",
+   "cle": "snags",
+   "ajoute": [
+    "points a traiter",
+    "points à traiter",
+    "points en suspens",
+    "sujets a traiter",
+    "sujets à traiter",
+    "travaux a reprendre",
+    "travaux à reprendre",
+    "reprises a effectuer",
+    "reprises à effectuer"
+   ],
+   "pourquoi": "Des intitulés de réserves très courants que le tri ne connaissait pas. Une note dont « Points à traiter » était le seul titre n'était plus découpée du tout et son contenu se perdait — trouvé par le banc de rejeu des cas connus."
   }
  ]
 }

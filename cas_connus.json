@@ -1,0 +1,96 @@
+{
+ "version": "2026-09-08",
+ "libelle": "Les cas déjà corrigés — le banc de non-régression",
+ "note": "Chaque entrée est un vrai document qui sortait faux, avec ce qu'on attend de lui maintenant. On les rejoue avant chaque livraison : un cas qui revient est une régression, et on ne livre pas. L'attendu s'écrit dans un vocabulaire fermé — dans_rubrique, attribue, pas_attribue, champ, combien, sans_invariant — jamais du code.",
+ "cas": [
+  {
+   "id": "C-0001",
+   "famille": "L1",
+   "quoi": "Un mot de métier dans la phrase ne nomme pas l'entreprise",
+   "rejeu": {
+    "type_entree": "Notes",
+    "entete": {"meeting_date": "2026-10-12"},
+    "carnet": [
+     {"entreprise": "BATIREST", "lot": "03", "contact": "Marc Kieffer", "role": "conducteur", "place": "titulaire"},
+     {"entreprise": "PEINTURE ET DECO", "lot": "20", "contact": "Sonia Vasseur", "role": "", "place": "titulaire"}
+    ],
+    "saisie": "compte rendu n 1 du 12 octobre 2026, chantier du rejeu\n\nreserves\n- les bandes de platre sont a reprendre avant peinture\n"
+   },
+   "attendu": {
+    "pas_attribue": [{"texte": "bandes de platre", "a": "PEINTURE"}]
+   }
+  },
+  {
+   "id": "C-0002",
+   "famille": "R2",
+   "quoi": "Une action datée sans responsable connu reste une action",
+   "rejeu": {
+    "type_entree": "Notes",
+    "entete": {"meeting_date": "2026-10-12"},
+    "carnet": [
+     {"entreprise": "BATIREST", "lot": "03", "contact": "Marc Kieffer", "role": "conducteur", "place": "titulaire"}
+    ],
+    "saisie": "compte rendu n 1 du 12 octobre 2026, chantier du rejeu\n\nsuites a donner\n- le principal du college previent les familles, pour le 25 septembre\n"
+   },
+   "attendu": {
+    "dans_rubrique": [{"texte": "previent les familles", "rubrique": "actions"}],
+    "champ": [{"texte": "previent les familles", "champ": "deadline", "vaut": "2026-09-25"}]
+   }
+  },
+  {
+   "id": "C-0003",
+   "famille": "E1",
+   "quoi": "L'endroit va dans la localisation, pas dans la description seule",
+   "rejeu": {
+    "type_entree": "Notes",
+    "entete": {"meeting_date": "2026-10-12"},
+    "carnet": [
+     {"entreprise": "BATIREST", "lot": "03", "contact": "Marc Kieffer", "role": "conducteur", "place": "titulaire"}
+    ],
+    "saisie": "compte rendu n 1 du 12 octobre 2026, chantier du rejeu\n\nreserves\n- salle 12, la porte paliere ferme mal, batirest, pour le 5 octobre\n"
+   },
+   "attendu": {
+    "champ": [
+     {"texte": "porte paliere", "champ": "location", "vaut": "salle 12"},
+     {"texte": "porte paliere", "champ": "deadline", "vaut": "2026-10-05"}
+    ],
+    "attribue": [{"texte": "porte paliere", "a": "BATIREST"}]
+   }
+  },
+  {
+   "id": "C-0004",
+   "famille": "R1",
+   "quoi": "Un intitulé libre va bien à sa rubrique",
+   "rejeu": {
+    "type_entree": "Notes",
+    "entete": {"meeting_date": "2026-10-12"},
+    "carnet": [
+     {"entreprise": "BATIREST", "lot": "03", "contact": "Marc Kieffer", "role": "conducteur", "place": "titulaire"}
+    ],
+    "saisie": "compte rendu n 1 du 12 octobre 2026, chantier du rejeu\n\npoints a traiter\n- le calfeutrement des menuiseries est a reprendre au premier etage\n\nsuites a donner\n- batirest transmet le plan de recolement pour le 30 octobre\n"
+   },
+   "attendu": {
+    "dans_rubrique": [
+     {"texte": "calfeutrement", "rubrique": "snags"},
+     {"texte": "plan de recolement", "rubrique": "actions"}
+    ]
+   }
+  },
+  {
+   "id": "C-0005",
+   "famille": "L3",
+   "quoi": "Une saisie sans réserve n'invente pas de réserve",
+   "rejeu": {
+    "type_entree": "Notes",
+    "entete": {"meeting_date": "2026-10-12"},
+    "carnet": [
+     {"entreprise": "BATIREST", "lot": "03", "contact": "Marc Kieffer", "role": "conducteur", "place": "titulaire"}
+    ],
+    "saisie": "compte rendu n 1 du 12 octobre 2026, chantier du rejeu\n\navancement\n- le gros oeuvre est termine au rez-de-chaussee\n"
+   },
+   "attendu": {
+    "combien": {"snags": 0}
+   }
+  }
+ ]
+}
